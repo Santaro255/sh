@@ -20,6 +20,7 @@ echo "Create jail.local"
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
 # Create sshd jail
+echo "Create sshd jail"
 cat > /etc/fail2ban/jail.d/sshd.conf <<EOL
 [sshd]
 enabled = true
