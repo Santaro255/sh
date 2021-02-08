@@ -1,15 +1,15 @@
 #!/bin/bash
-# Update CentOS
-echo -e "\033[0;32m \nUpdating CentOS \033[0m"
-dnf upgrade -y
+# Update Ubuntu
+echo -e "\033[0;32m \nUpdating Ubuntu \033[0m"
+apt-get update && apt-get upgrade -y
 
 # Installing packages
 echo -e "\033[0;32m \nInstalling packages \033[0m"
-dnf install epel-release vim mc wget dnf-plugins-core -y
+apt-get install vim mc -y
 
 # Installing Fail2Ban
 echo -e "\033[0;32m \nInstalling Fail2Ban \033[0m"
-dnf install fail2ban -y
+apt-get install fail2ban -y
 
 # Create fail2ban.local
 echo -e "\033[0;32m \nCreate fail2ban.local \033[0m"
@@ -37,11 +37,12 @@ systemctl enable fail2ban && systemctl start fail2ban
 
 # Adding docker repo
 echo -e "\033[0;32m \nAdding docker repo \033[0m"
-dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 # Installing docker
 echo -e "\033[0;32m \nInstalling docker \033[0m"
-dnf install docker-ce docker-ce-cli containerd.io -y
+apt-get update && apt-get install docker-ce docker-ce-cli containerd.io -y
 
 # Enable and start docker
 echo -e "\033[0;32m \nEnable and start docker \033[0m"
