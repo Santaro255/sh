@@ -12,16 +12,19 @@ curl -L https://raw.githubusercontent.com/Santaro255/sh/master/ubuntu/ubuntu-doc
 
 ---
 ## Create swap
-**Interactive script** \
-curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswap.sh && chmod +x ./mkswap.sh && ./mkswap.sh
+**Interactive script - create swap + change swappiness** \
+curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswap.sh && chmod +x ./mkswap.sh && **./mkswap.sh** && rm ./mkswap.sh
 
-**2Gb** \
-curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && ./mkswapc.sh 2048
+**Create swap: 2Gb** \
+curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && **./mkswapc.sh 2048** && rm ./mkswapc.sh
 
-**4Gb** \
-curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && ./mkswapc.sh 4096
+**Create swap: 4Gb** \
+curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && **./mkswapc.sh 4096** && rm ./mkswapc.sh
 
-**8Gb** \
-curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && ./mkswapc.sh 8192
+**Create swap: 8Gb** \
+curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && **./mkswapc.sh 8192** && rm ./mkswapc.sh
+
+**Create swap: 4Gb and change vm.swappiness: 10** \
+curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && **./mkswapc+.sh 4096 10** && rm ./mkswapc+.sh
 
 ---
