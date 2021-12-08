@@ -13,7 +13,7 @@ curl -L https://raw.githubusercontent.com/Santaro255/sh/master/ubuntu/ubuntu-doc
 ---
 ## Create swap
 **Interactive script** \
-curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswap.sh && ./mkswap.sh
+curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswap.sh && chmod +x ./mkswap.sh && ./mkswap.sh
 
 **2Gb** \
 curl -O https://raw.githubusercontent.com/Santaro255/sh/master/mkswap/mkswapc.sh && chmod +x ./mkswapc.sh && ./mkswapc.sh 2048
